@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Sistema Solar - Carrossel</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-logo">
+    <img src="images/solar-system.jpg" alt="Logo" /> 
+    <span>Sistema Solar</span>
+  </div>
+
+  <ul class="navbar-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="informacoes.html">Mais informações</a></li>
+  </ul>
+</nav>
+
+    <div class="carousel-container">
+        <div class="carousel-track">
+
+            <!-- Mercúrio -->
+            <div class="carousel-card is-active">
+                <div class="card-image-container">
+                    <img src="images/Mercury.jpg" alt="Mercúrio" class="card-image" />
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title text-cyan-400" data-text="Mercúrio">Mercúrio</h3>
+                    <p class="card-description">
+                        O menor planeta do Sistema Solar e o mais próximo do Sol. Superfície muito craterada; temperaturas extremas (~−180°C à noite até ~430°C durante o dia).
+                    </p>
+                    <div class="card-progress">
+                        <div class="progress-value" style="width:38%"></div>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <div class="stat-key">DISTÂNCIA</div>
+                            <div class="stat-value">~57,9 milhões km (média)</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-key">MISSÕES/ESTUDOS</div>
+                            <div class="stat-value">Mariner 10, MESSENGER; BepiColombo em trânsito/estudo.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-details">
+                    <div class="tech-tag">Sem atmosfera densa</div>
+                    <div class="tech-tag">Núcleo rico em ferro</div>
+                    <div class="tech-tag">Órbita: ~88 dias</div>
+                </div>
+            </div>
+
+            <!-- Vênus -->
+            <div class="carousel-card">
+                <div class="card-image-container">
+                    <img src="images/Venus.jpg" alt="Vênus" class="card-image" />
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title text-amber-400" data-text="Vênus">Vênus</h3>
+                    <p class="card-description">
+                        Conhecido como "Estrela d'Alva". Atmosfera densa rica em CO₂ causa efeito estufa extremo — superfície ~460–465°C.
+                    </p>
+                    <div class="card-progress">
+                        <div class="progress-value" style="width:45%"></div>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <div class="stat-key">DISTÂNCIA</div>
+                            <div class="stat-value">~108 milhões km (média)</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-key">MISSÕES/ESTUDOS</div>
+                            <div class="stat-value">Venera, Magellan, Akatsuki; observações por radar.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-details">
+                    <div class="tech-tag">Atmosfera densa (CO₂)</div>
+                    <div class="tech-tag">Chuva ácida (sulfatos)</div>
+                    <div class="tech-tag">Rotação retrógrada</div>
+                </div>
+            </div>
+
+            <!-- Terra -->
+            <div class="carousel-card">
+                <div class="card-image-container">
+                    <img src="images/Terra.jpg" alt="Terra" class="card-image" />
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title text-blue-400" data-text="Terra">Terra</h3>
+                    <p class="card-description">
+                        Nosso lar. Único planeta conhecido com vida; ~71% coberto por água. Atmosfera rica em oxigênio que sustenta a biosfera.
+                    </p>
+                    <div class="card-progress">
+                        <div class="progress-value" style="width:100%"></div>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <div class="stat-key">DISTÂNCIA</div>
+                            <div class="stat-value">~149,6 milhões km (1 AU)</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-key">MISSÕES/ESTUDOS</div>
+                            <div class="stat-value">Habitável e extensivamente estudada por satélites e sondas.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-details">
+                    <div class="tech-tag">Água líquida</div>
+                    <div class="tech-tag">Campo magnético</div>
+                    <div class="tech-tag">Biosfera ativa</div>
+                </div>
+            </div>
+
+            <!-- Marte -->
+            <div class="carousel-card">
+                <div class="card-image-container">
+                    <img src="images/Marte.webp" alt="Marte" class="card-image" />
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title text-red-400" data-text="Marte">Marte</h3>
+                    <p class="card-description">
+                        O "Planeta Vermelho". Possui Olympus Mons (maior vulcão do Sistema Solar, ~21,9 km de altura) e evidências de água líquida no passado.
+                    </p>
+                    <div class="card-progress">
+                        <div class="progress-value" style="width:62%"></div>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <div class="stat-key">DISTÂNCIA</div>
+                            <div class="stat-value">~227,9 milhões km (média)</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-key">MISSÕES/ESTUDOS</div>
+                            <div class="stat-value">Curiosity, Perseverance, InSight e vários orbitadores.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-details">
+                    <div class="tech-tag">Calotas polares</div>
+                    <div class="tech-tag">Rovers e landers</div>
+                    <div class="tech-tag">Solo oxidado</div>
+                </div>
+            </div>
+
+            <!-- Júpiter -->
+            <div class="carousel-card">
+                <div class="card-image-container">
+                    <img src="images/Jupiter.jpg" alt="Júpiter" class="card-image" />
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title text-orange-400" data-text="Júpiter">Júpiter</h3>
+                    <p class="card-description">
+                        O maior planeta do Sistema Solar. A Grande Mancha Vermelha é uma tempestade enorme e duradoura. Sistema de luas extenso e complexo.
+                    </p>
+                    <div class="card-progress">
+                        <div class="progress-value" style="width:51%"></div>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <div class="stat-key">DISTÂNCIA</div>
+                            <div class="stat-value">~778,5 milhões km (média)</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-key">Luas</div>
+                            <div class="stat-value">≈95</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-details">
+                    <div class="tech-tag">Gigante gasoso</div>
+                    <div class="tech-tag">Luas numerosas</div>
+                    <div class="tech-tag">Campo magnético intenso</div>
+                </div>
+            </div>
+
+            <!-- Saturno -->
+            <div class="carousel-card">
+                <div class="card-image-container">
+                    <img src="images/Saturno.jpg" alt="Saturno" class="card-image" />
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title text-yellow-400" data-text="Saturno">Saturno</h3>
+                    <p class="card-description">
+                        Famoso por seus anéis espetaculares compostos de gelo e rocha. Baixa densidade média; Titã é maior que Mercúrio.
+                    </p>
+                    <div class="card-progress">
+                        <div class="progress-value" style="width:48%"></div>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <div class="stat-key">DISTÂNCIA</div>
+                            <div class="stat-value">~1,43 bilhões km (média)</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-key">Luas</div>
+                            <div class="stat-value">~274</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-details">
+                    <div class="tech-tag">Anéis icônicos</div>
+                    <div class="tech-tag">Baixa densidade</div>
+                    <div class="tech-tag">Titã (maior que Mercúrio)</div>
+                </div>
+            </div>
+
+            <!-- Urano -->
+            <div class="carousel-card">
+                <div class="card-image-container">
+                    <img src="images/Urano.jpg" alt="Urano" class="card-image" />
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title text-cyan-300" data-text="Urano">Urano</h3>
+                    <p class="card-description">
+                        Gira praticamente de lado (inclinação ≈98°). Cor azul-esverdeada devido ao metano na atmosfera. Poucas missões (Voyager 2 flyby); JWST traz novas observações.
+                    </p>
+                    <div class="card-progress">
+                        <div class="progress-value" style="width:34%"></div>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <div class="stat-key">DISTÂNCIA</div>
+                            <div class="stat-value">~2,87 bilhões km (média)</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-key">Luas</div>
+                            <div class="stat-value">~27 (contagem histórica)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-details">
+                    <div class="tech-tag">Rotação lateral</div>
+                    <div class="tech-tag">Metano atmosférico</div>
+                    <div class="tech-tag">Extremamente frio</div>
+                </div>
+            </div>
+
+            <!-- Netuno -->
+            <div class="carousel-card">
+                <div class="card-image-container">
+                    <img src="images/Netuno.png" alt="Netuno" class="card-image" />
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title text-blue-500" data-text="Netuno">Netuno</h3>
+                    <p class="card-description">
+                        O planeta mais distante (dos 8 clássicos). Ventos extremamente rápidos (registros até ~2.000–2.100 km/h). Cor azul por metano e outros compostos.
+                    </p>
+                    <div class="card-progress">
+                        <div class="progress-value" style="width:28%"></div>
+                    </div>
+                    <div class="card-stats">
+                        <div class="stat">
+                            <div class="stat-key">DISTÂNCIA</div>
+                            <div class="stat-value">~4,50 bilhões km (média)</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-key">Luas</div>
+                            <div class="stat-value">14 (contagem histórica)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-details">
+                    <div class="tech-tag">Ventos supersônicos</div>
+                    <div class="tech-tag">Grande Mancha Escura</div>
+                    <div class="tech-tag">Fenômeno climático</div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-button prev" aria-label="Anterior">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+        </button>
+
+        <button class="carousel-button next" aria-label="Próximo">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+        </button>
+
+        <div class="carousel-indicators">
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator active"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
