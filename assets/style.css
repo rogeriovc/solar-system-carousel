@@ -166,41 +166,170 @@ body::before{
 .feature-title{color:#5eead4;font-weight:600;font-size:1.1rem;margin-bottom:8px}
 .feature-desc{color:#cbd5e1;font-size:.95rem;line-height:1.5}
 
-/* INFORMAÇÕES */
+/* CALCULADORA DE IDADE */
 .info-main{max-width:1400px;margin:0 auto}
 .info-header{text-align:center;margin-bottom:var(--spacing-xl)}
 .info-header h1{font-size:3rem;background:linear-gradient(135deg,#00eaff,#0ea5e9,#5eead4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:var(--spacing-sm);font-weight:700}
 .info-header p{color:var(--muted);font-size:1.15rem;max-width:700px;margin:0 auto;line-height:1.6}
-.planets-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:30px;margin-bottom:var(--spacing-xl)}
-.planet-detail-card{
+
+/* Formulário */
+.age-form-container{max-width:600px;margin:0 auto var(--spacing-xl)}
+.form-card{
   background:linear-gradient(135deg, rgba(30,41,59,.9), rgba(15,23,42,.95));
-  border:1px solid rgba(56,189,248,.15);border-radius:var(--border-radius-lg);padding:35px;backdrop-filter:blur(12px);
-  box-shadow:0 10px 40px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.05);transition:all .4s;position:relative
+  backdrop-filter:blur(16px);border-radius:var(--border-radius-xl);padding:var(--spacing-xl);
+  box-shadow:0 0 40px rgba(56,189,248,.15),inset 0 1px 0 rgba(255,255,255,.05);
+  border:1px solid rgba(94,234,212,.1);position:relative
 }
-.planet-detail-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg, transparent, var(--planet-color), transparent);opacity:.6}
-.planet-detail-card:hover{transform:translateY(-8px);border-color:rgba(56,189,248,.3);box-shadow:0 15px 50px rgba(0,0,0,.6),0 0 30px rgba(56,189,248,.15)}
-.planet-header{display:flex;align-items:center;gap:var(--spacing-sm);margin-bottom:var(--spacing-md);padding-bottom:20px;border-bottom:1px solid rgba(94,234,212,.15)}
-.planet-name{font-size:1.8rem;font-weight:700;color:var(--planet-color);margin:0}
-.planet-subtitle{font-size:.9rem;color:var(--muted);font-style:italic;margin-top:5px}
-.info-section{margin-bottom:var(--spacing-md)}
-.info-section h4{color:#7dd3fc;font-size:1.1rem;margin-bottom:12px;font-weight:600;display:flex;align-items:center;gap:8px}
-.info-section h4::before{content:"▸";color:var(--accent)}
-.info-section p{color:#e2e8f0;line-height:1.7;font-size:.98rem;margin-bottom:10px}
-.info-list{list-style:none;padding:0}
-.info-list li{color:#cbd5e1;padding:8px 0 8px 20px;position:relative;line-height:1.6;font-size:.95rem}
-.info-list li::before{content:"•";position:absolute;left:0;color:var(--planet-color);font-size:1.3rem;line-height:1.2}
-.fact-badge{display:inline-block;background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.2);padding:6px 12px;border-radius:var(--border-radius-sm);font-size:.85rem;color:#7dd3fc;margin:0 8px 8px 0;font-weight:600}
+.form-card::before{
+  content:"";position:absolute;inset:-2px;
+  background:linear-gradient(45deg, transparent, rgba(56,189,248,.15), transparent);
+  border-radius:var(--border-radius-xl);z-index:-1;animation:borderFlow 4s ease-in-out infinite
+}
+.form-title{
+  font-size:2rem;color:#38bdf8;margin-bottom:var(--spacing-lg);
+  text-align:center;font-weight:600;letter-spacing:1px
+}
+.age-form{display:flex;flex-direction:column;gap:var(--spacing-md)}
+.form-group{display:flex;flex-direction:column;gap:10px}
+.form-label{
+  color:#7dd3fc;font-size:1rem;font-weight:600;
+  letter-spacing:.5px;text-transform:uppercase
+}
+.form-input{
+  background:rgba(15,23,42,.6);border:1px solid rgba(56,189,248,.2);
+  border-radius:var(--border-radius-md);padding:15px 20px;
+  color:#e2e8f0;font-size:1.05rem;transition:all .3s;
+  font-family:inherit
+}
+.form-input:focus{
+  outline:none;border-color:rgba(56,189,248,.5);
+  box-shadow:0 0 20px rgba(56,189,248,.2),inset 0 1px 0 rgba(255,255,255,.05);
+  background:rgba(15,23,42,.8)
+}
+.form-input::placeholder{color:rgba(148,163,184,.6)}
+.form-button{
+  background:linear-gradient(135deg, rgba(56,189,248,.2), rgba(14,165,233,.3));
+  border:1px solid rgba(56,189,248,.4);border-radius:var(--border-radius-md);
+  padding:18px 30px;color:#e6f7ff;font-size:1.1rem;font-weight:600;
+  cursor:pointer;transition:all .3s;display:flex;align-items:center;
+  justify-content:center;gap:12px;margin-top:var(--spacing-sm);
+  text-transform:uppercase;letter-spacing:1px;position:relative;overflow:hidden
+}
+.form-button::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(135deg, transparent, rgba(56,189,248,.3), transparent);
+  transform:translateX(-100%);transition:transform .5s
+}
+.form-button:hover::before{transform:translateX(100%)}
+.form-button:hover{
+  background:linear-gradient(135deg, rgba(56,189,248,.3), rgba(14,165,233,.4));
+  border-color:rgba(56,189,248,.6);transform:translateY(-2px);
+  box-shadow:0 10px 30px rgba(56,189,248,.3),0 0 40px rgba(56,189,248,.2)
+}
+.form-button:active{transform:translateY(0)}
+.button-icon{width:24px;height:24px}
 
-/* Cores dos planetas */
-.mercury{--planet-color:#a8a29e}.venus{--planet-color:#fbbf24}.earth{--planet-color:#3b82f6}.mars{--planet-color:#ef4444}.jupiter{--planet-color:#f97316}.saturn{--planet-color:#eab308}.uranus{--planet-color:#06b6d4}.neptune{--planet-color:#6366f1}
+/* Resultados */
+.results-section{margin-top:var(--spacing-xl)}
+.results-header{
+  text-align:center;margin-bottom:var(--spacing-xl);
+  padding:var(--spacing-lg);background:linear-gradient(135deg, rgba(56,189,248,.08), rgba(15,23,42,.6));
+  border-radius:var(--border-radius-lg);border:1px solid rgba(56,189,248,.15)
+}
+.results-header h2{
+  font-size:2.2rem;color:#5eead4;margin-bottom:var(--spacing-sm);font-weight:700
+}
+.results-header p{font-size:1.3rem;color:#7dd3fc}
+.results-header span{color:#00eaff;font-weight:700}
 
-/* Comparações */
-.comparison-section{background:linear-gradient(135deg, rgba(30,41,59,.8), rgba(15,23,42,.9));border:1px solid rgba(94,234,212,.15);border-radius:var(--border-radius-lg);padding:var(--spacing-lg);margin-top:50px;backdrop-filter:blur(12px)}
-.comparison-section h2{color:#5eead4;font-size:2rem;margin-bottom:30px;text-align:center}
-.comparison-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.comparison-card{background:rgba(15,23,42,.6);border:1px solid rgba(56,189,248,.1);border-radius:var(--border-radius-md);padding:20px;text-align:center}
-.comparison-card h3{color:var(--accent-2);font-size:1.2rem;margin-bottom:var(--spacing-sm)}
-.comparison-card p{color:#cbd5e1;font-size:.95rem;line-height:1.6}
+/* Cards de Idade dos Planetas */
+.planets-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;margin-bottom:var(--spacing-xl)
+}
+.planet-age-card{
+  background:linear-gradient(135deg, rgba(30,41,59,.9), rgba(15,23,42,.95));
+  border:1px solid rgba(56,189,248,.15);border-radius:var(--border-radius-lg);
+  padding:30px;backdrop-filter:blur(12px);
+  box-shadow:0 10px 40px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.05);
+  transition:all .4s;position:relative;overflow:hidden
+}
+.planet-age-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg, transparent, currentColor, transparent);
+  opacity:.6
+}
+.planet-age-card:hover{
+  transform:translateY(-8px);border-color:rgba(56,189,248,.3);
+  box-shadow:0 15px 50px rgba(0,0,0,.6),0 0 30px rgba(56,189,248,.15)
+}
+.planet-age-header{
+  display:flex;align-items:center;gap:15px;margin-bottom:var(--spacing-md);
+  padding-bottom:20px;border-bottom:1px solid rgba(94,234,212,.15)
+}
+.planet-icon{font-size:2.5rem}
+.planet-age-name{
+  font-size:1.6rem;font-weight:700;margin:0;letter-spacing:1px
+}
+.age-display{
+  text-align:center;margin:var(--spacing-lg) 0;
+  padding:var(--spacing-md);background:rgba(15,23,42,.4);
+  border-radius:var(--border-radius-md);
+  border:1px solid rgba(56,189,248,.1)
+}
+.age-number{
+  font-size:3.5rem;font-weight:700;
+  background:linear-gradient(135deg,#00eaff,#38bdf8);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;line-height:1.2;margin-bottom:8px
+}
+.age-label{
+  font-size:1rem;color:#94a3b8;text-transform:lowercase;
+  letter-spacing:.5px;font-weight:500
+}
+.planet-info{margin:var(--spacing-md) 0}
+.info-item{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:12px 0;border-bottom:1px solid rgba(56,189,248,.08);gap:15px
+}
+.info-item:last-child{border-bottom:none}
+.info-label{
+  color:#7dd3fc;font-size:.9rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:.5px
+}
+.info-value{
+  color:#e2e8f0;font-size:.95rem;text-align:right
+}
+.age-bar{
+  height:8px;background:rgba(56,189,248,.1);border-radius:6px;
+  overflow:hidden;margin-top:var(--spacing-md);position:relative
+}
+.age-bar-fill{
+  height:100%;border-radius:6px;transition:width 1s ease-out;
+  box-shadow:0 0 10px currentColor;position:relative
+}
+.age-bar-fill::after{
+  content:"";position:absolute;top:0;left:0;right:0;bottom:0;
+  background:linear-gradient(90deg, transparent, rgba(255,255,255,.3), transparent);
+  animation:shimmer 2s infinite
+}
+@keyframes shimmer{
+  0%{transform:translateX(-100%)}
+  100%{transform:translateX(100%)}
+}
+
+/* Info Box */
+.info-box{
+  background:linear-gradient(135deg, rgba(236,72,153,.1), rgba(59,130,246,.08));
+  border:1px solid rgba(236,72,153,.2);border-radius:var(--border-radius-lg);
+  padding:var(--spacing-lg);margin-top:var(--spacing-xl)
+}
+.info-box h3{
+  color:#ec4899;font-size:1.5rem;margin-bottom:var(--spacing-sm);font-weight:600
+}
+.info-box p{
+  color:#e2e8f0;line-height:1.8;font-size:1.05rem
+}
 
 /* RESPONSIVIDADE */
 @media (max-width:768px){
@@ -216,8 +345,14 @@ body::before{
   .card-title{font-size:1.15rem}.card-description{font-size:.88rem}
   .sobre-content{padding:var(--spacing-lg) 30px}.sobre-content h1{font-size:2.2rem}.sobre-content h2{font-size:1.5rem}
   .tech-list,.features-grid{grid-template-columns:1fr}
-  .info-header h1{font-size:2.2rem}.planets-grid,.comparison-grid{grid-template-columns:1fr}
-  .planet-detail-card{padding:var(--spacing-md)}
+  .info-header h1{font-size:2.2rem}
+  .planets-grid{grid-template-columns:1fr}
+  .age-form-container{padding:0 15px}
+  .form-card{padding:var(--spacing-lg)}
+  .form-title{font-size:1.6rem}
+  .age-number{font-size:2.8rem}
+  .planet-age-card{padding:var(--spacing-md)}
+  .navbar-links{gap:20px;font-size:.9rem}
 }
 @media (max-width:420px){
   .carousel-card{min-width:240px;max-width:240px;margin:0 10px}
@@ -225,4 +360,12 @@ body::before{
   .card-stats .stat{padding:11px 13px;min-height:60px}
   .card-stats .stat-key{font-size:.65rem}.card-stats .stat-value{font-size:.8rem}
   .tech-tag{font-size:.68rem;padding:6px 10px}
+  .info-header h1{font-size:1.8rem}
+  .form-title{font-size:1.4rem}
+  .age-number{font-size:2.2rem}
+  .planet-age-name{font-size:1.3rem}
+  .navbar{padding:0 20px}
+  .navbar-logo{font-size:1.1rem}
+  .navbar-logo img{width:30px;height:30px}
+  .navbar-links{gap:15px;font-size:.85rem}
 }

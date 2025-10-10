@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mais Informações - Sistema Solar</title>
+  <title>Sua Idade nos Planetas - Sistema Solar</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -18,270 +18,75 @@
     <ul class="navbar-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="informacoes.html" class="active">Mais informações</a></li>
+      <li><a href="informacoes.html" class="active">Calculadora Planetária</a></li>
     </ul>
   </nav>
 
   <!-- CONTEÚDO PRINCIPAL -->
   <main class="info-main">
     <div class="info-header">
-      <h1>Enciclopédia do Sistema Solar</h1>
-      <p>Fatos essenciais sobre cada planeta </p>
+      <h1>Calculadora de Idade Planetária</h1>
+      <p>Descubra quantos anos você teria em cada planeta do Sistema Solar</p>
     </div>
 
-    <div class="planets-grid">
-      
-      <!-- MERCÚRIO -->
-      <article class="planet-detail-card mercury">
-        <div class="planet-header">
-          <div>
-            <h3 class="planet-name">Mercúrio</h3>
-            <p class="planet-subtitle">O Mensageiro Veloz</p>
+    <!-- FORMULÁRIO -->
+    <div class="age-form-container">
+      <div class="form-card">
+        <h2 class="form-title">Seus Dados</h2>
+        <form id="ageForm" class="age-form">
+          <div class="form-group">
+            <label for="userName" class="form-label">Nome Completo</label>
+            <input 
+              type="text" 
+              id="userName" 
+              class="form-input" 
+              placeholder="Digite seu nome"
+              required
+            />
           </div>
-        </div>
-
-        <div class="info-section">
-          <h4>Resumo</h4>
-          <p>Menor planeta, órbita curta (~88 dias) e grande núcleo metálico relativo ao tamanho. Temperatura varia muito: ~−170°C a +430°C.</p>
-        </div>
-
-        <div class="info-section">
-          <h4>Principais pontos</h4>
-          <ul class="info-list">
-            <li>Ressonância 3:2 (rotação/órbita).</li>
-            <li>Gelo em crateras polares permanentemente sombreadas.</li>
-          </ul>
-        </div>
-
-        <div>
-          <span class="fact-badge">−170°C a +430°C</span>
-          <span class="fact-badge">~47 km/s orbital</span>
-          <span class="fact-badge">58,6 dias (sideral)</span>
-        </div>
-      </article>
-
-      <!-- VÊNUS -->
-      <article class="planet-detail-card venus">
-        <div class="planet-header">
-          <div>
-            <h3 class="planet-name">Vênus</h3>
-            <p class="planet-subtitle">O Gêmeo Infernal da Terra</p>
+          
+          <div class="form-group">
+            <label for="birthDate" class="form-label">Data de Nascimento</label>
+            <input 
+              type="date" 
+              id="birthDate" 
+              class="form-input"
+              required
+            />
           </div>
-        </div>
 
-        <div class="info-section">
-          <h4>Resumo</h4>
-          <p>Atmosfera densa de CO₂ (≈96–97%) com pressão ≈90× da Terra e temperaturas ~460–470°C. Rotação retrógrada.</p>
-        </div>
-
-        <div class="info-section">
-          <h4>Principais pontos</h4>
-          <ul class="info-list">
-            <li>Nuvens de ácido sulfúrico; superfície altamente corrosiva.</li>
-            <li>Hipóteses de atividade vulcânica e debate sobre fosfina nas nuvens.</li>
-          </ul>
-        </div>
-
-        <div>
-          <span class="fact-badge">Pressão ≈92× Terra</span>
-          <span class="fact-badge">Atmosfera CO₂</span>
-        </div>
-      </article>
-
-      <!-- TERRA -->
-      <article class="planet-detail-card earth">
-        <div class="planet-header">
-          <div>
-            <h3 class="planet-name">Terra</h3>
-            <p class="planet-subtitle">Nosso Oásis Azul</p>
-          </div>
-        </div>
-
-        <div class="info-section">
-          <h4>Resumo</h4>
-          <p>Único planeta conhecido com vida; água líquida abundante, tectônica de placas ativa e campo magnético protetor.</p>
-        </div>
-
-        <div class="info-section">
-          <h4>Principais pontos</h4>
-          <ul class="info-list">
-            <li>Crucial para estabilidade climática: reciclagem via tectônica de placas.</li>
-            <li>A Lua influencia marés e estabilidade axial.</li>
-          </ul>
-        </div>
-
-        <div>
-          <span class="fact-badge">71% água</span>
-          <span class="fact-badge">Campo magnético ativo</span>
-        </div>
-      </article>
-
-      <!-- MARTE -->
-      <article class="planet-detail-card mars">
-        <div class="planet-header">
-          <div>
-            <h3 class="planet-name">Marte</h3>
-            <p class="planet-subtitle">O Planeta Vermelho</p>
-          </div>
-        </div>
-
-        <div class="info-section">
-          <h4>Resumo</h4>
-          <p>Mostra sinais claros de água no passado (vales, deltas). Exploração robótica ativa com rovers coletando amostras.</p>
-        </div>
-
-        <div class="info-section">
-          <h4>Principais pontos</h4>
-          <ul class="info-list">
-            <li>Olympus Mons (~21,9 km) e Valles Marineris (~4.000 km).</li>
-            <li>Pesquisas em curso sobre metano e água subterrânea.</li>
-          </ul>
-        </div>
-
-        <div>
-          <span class="fact-badge">Rovers ativos</span>
-          <span class="fact-badge">Olympus Mons ~21,9 km</span>
-        </div>
-      </article>
-
-      <!-- JÚPITER -->
-      <article class="planet-detail-card jupiter">
-        <div class="planet-header">
-          <div>
-            <h3 class="planet-name">Júpiter</h3>
-            <p class="planet-subtitle">O Rei Gigante</p>
-          </div>
-        </div>
-
-        <div class="info-section">
-          <h4>Resumo</h4>
-          <p>Maior planeta, com forte gravidade e magnetosfera; sistema extenso de luas e uma enorme grande tempestade (Grande Mancha Vermelha).</p>
-        </div>
-
-        <div class="info-section">
-          <h4>Principais pontos</h4>
-          <ul class="info-list">
-            <li>Grande Mancha Vermelha — tempestade persistente por séculos.</li>
-            <li>Contagem de luas cresce conforme novas descobertas (≈97 confirmadas em 30/04/2025).</li>
-          </ul>
-        </div>
-
-        <div>
-          <span class="fact-badge">Tempestade gigante</span>
-          <span class="fact-badge">≈97 luas (30/04/2025)</span>
-        </div>
-      </article>
-
-      <!-- SATURNO -->
-      <article class="planet-detail-card saturn">
-        <div class="planet-header">
-          <div>
-            <h3 class="planet-name">Saturno</h3>
-            <p class="planet-subtitle">O Senhor dos Anéis</p>
-          </div>
-        </div>
-
-        <div class="info-section">
-          <h4>Resumo</h4>
-          <p>Anéis muito extensos e finos, compostos principalmente por gelo; sistema de luas grande e em expansão conforme novas confirmações.</p>
-        </div>
-
-        <div class="info-section">
-          <h4>Principais pontos</h4>
-          <ul class="info-list">
-            <li>Anéis com espessura média de dezenas de metros; cobrem grande área.</li>
-            <li>Contagem de luas atualizada: ≈274 confirmadas (11/03/2025).</li>
-          </ul>
-        </div>
-
-        <div>
-          <span class="fact-badge">Anéis extensos</span>
-          <span class="fact-badge">≈274 luas (11/03/2025)</span>
-        </div>
-      </article>
-
-      <!-- URANO -->
-      <article class="planet-detail-card uranus">
-        <div class="planet-header">
-          <div>
-            <h3 class="planet-name">Urano</h3>
-            <p class="planet-subtitle">O Planeta Tombado</p>
-          </div>
-        </div>
-
-        <div class="info-section">
-          <h4>Resumo</h4>
-          <p>Inclinação axial ~97,8° faz o planeta 'rolar' — estações extremas que duram décadas. Poucas missões; dados recentes do JWST melhoram o conhecimento.</p>
-        </div>
-
-        <div class="info-section">
-          <h4>Principais pontos</h4>
-          <ul class="info-list">
-            <li>Composição com água, amônia e metano em estados densos.</li>
-            <li>Anéis finos e sistema de luas em mapeamento contínuo.</li>
-          </ul>
-        </div>
-
-        <div>
-          <span class="fact-badge">Eixo ≈97,8°</span>
-          <span class="fact-badge">Rotação ~17,2h</span>
-        </div>
-      </article>
-
-      <!-- NETUNO -->
-      <article class="planet-detail-card neptune">
-        <div class="planet-header">
-          <div>
-            <h3 class="planet-name">Netuno</h3>
-            <p class="planet-subtitle">O Gigante Azul Distante</p>
-          </div>
-        </div>
-
-        <div class="info-section">
-          <h4>Resumo</h4>
-          <p>Planeta mais distante (dos 8 clássicos), com ventos extremamente fortes — medições em torno de 2.000 km/h em regiões específicas.</p>
-        </div>
-
-        <div class="info-section">
-          <h4>Principais pontos</h4>
-          <ul class="info-list">
-            <li>Manchas escuras/temporárias observadas; clima dinâmico apesar da pouca luz solar.</li>
-            <li>Tritão, lua retrograda, mostra atividade geológica e possivelmente foi capturada.</li>
-          </ul>
-        </div>
-
-        <div>
-          <span class="fact-badge">Ventos ~2.000 km/h</span>
-          <span class="fact-badge">Tritão: órbita retrógrada</span>
-        </div>
-      </article>
-
-    </div>
-
-    <!-- SEÇÃO DE COMPARAÇÕES -->
-    <section class="comparison-section">
-      <h2>Comparações Rápidas</h2>
-      <div class="comparison-grid">
-        
-        <div class="comparison-card">
-          <h3>Velocidades Orbitais</h3>
-          <p><strong>Mercúrio:</strong> 47,4 km/s · <strong>Terra:</strong> 29,8 km/s · <strong>Netuno:</strong> 5,4 km/s</p>
-        </div>
-
-        <div class="comparison-card">
-          <h3>Temperaturas Extremas</h3>
-          <p><strong>Vênus:</strong> ~460–470°C · <strong>Terra:</strong> -88°C a +58°C · <strong>Urano:</strong> ~−224°C</p>
-        </div>
-
-        <div class="comparison-card">
-          <h3>Sistemas de Luas</h3>
-          <p><strong>Saturno:</strong> ≈274 · <strong>Júpiter:</strong> ≈97 · <strong>Mercúrio/Vênus:</strong> 0</p>
-        </div>
-
+          <button type="submit" class="form-button">
+            <span>Calcular Idade Planetária</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="button-icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+          </button>
+        </form>
       </div>
-    </section>
+    </div>
+
+    <!-- RESULTADOS -->
+    <div id="resultsSection" class="results-section" style="display: none;">
+      <div class="results-header">
+        <h2>Resultados para <span id="displayName"></span></h2>
+        <p>Idade na Terra: <span id="earthAge"></span> anos</p>
+      </div>
+
+      <div class="planets-grid" id="planetsGrid">
+        <!-- Os cards dos planetas serão inseridos aqui no JavaScript -->
+      </div>
+
+      <div class="info-box">
+        <h3>Por que as idades são diferentes?</h3>
+        <p>
+          Cada planeta tem um período orbital diferente — o tempo que leva para completar uma volta ao redor do Sol. 
+          Quanto mais distante do Sol, mais longo é o ano daquele planeta. Por isso, sua idade varia em cada mundo do Sistema Solar!
+        </p>
+      </div>
+    </div>
 
   </main>
 
+  <script src="js/age-calculator.js"></script>
 </body>
 </html>
