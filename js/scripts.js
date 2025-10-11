@@ -10,7 +10,7 @@ let cardWidth = cards[0].offsetWidth;
 let cardMargin = parseInt(window.getComputedStyle(cards[0]).marginRight) * 2;
 const totalCards = cards.length;
 
-// Debounce function
+// Função de debounce
 function debounce(func, wait, immediate) {
 	var timeout;
 	return function () {
@@ -27,18 +27,18 @@ function debounce(func, wait, immediate) {
 	};
 }
 
-// Initialize carousel
+// Inicializar carrossel
 function initializeCarousel() {
 	cardWidth = cards[0].offsetWidth;
 	cardMargin = parseInt(window.getComputedStyle(cards[0]).marginRight) * 2;
 
-	// Center the initial card
+	// Centralizar o card inicial
 	const initialOffset = container.offsetWidth / 2 - cardWidth / 2;
 	track.style.transform = `translateX(${initialOffset}px)`;
 	updateCarousel();
 }
 
-// Update carousel state
+// Atualizar estado do carrossel
 function updateCarousel() {
 	
 	cards.forEach((card, index) => {
@@ -63,15 +63,15 @@ function updateCarousel() {
 		}
 	});
 
-	// Update indicators
+	// Atualizar indicadores
 	indicators.forEach((indicator, index) => {
 		indicator.classList.toggle("active", index === currentIndex);
 	});
 }
 
-// Move to a specific slide
+// Mover para um slide específico
 function moveToSlide(targetIndex) {
-	// Normalize index for infinite loop
+	// Normalizar índice para loop infinito
 	if (targetIndex < 0) {
 		targetIndex = totalCards - 1;
 	} else if (targetIndex >= totalCards) {
@@ -87,7 +87,7 @@ function moveToSlide(targetIndex) {
 	currentIndex = targetIndex;
 	updateCarousel();
 
-	// Add a subtle flash effect to simulate a hi-tech transition
+	// Adicionar um efeito de flash sutil para simular uma transição hi-tech
 	const flashEffect = document.createElement("div");
 	flashEffect.style.cssText = `
                 position: absolute;
@@ -114,7 +114,7 @@ function moveToSlide(targetIndex) {
 	}, 10);
 }
 
-// Event Listeners
+// Ouvintes de eventos
 nextButton.addEventListener("click", () => {
 	moveToSlide(currentIndex + 1);
 });
@@ -123,14 +123,14 @@ prevButton.addEventListener("click", () => {
 	moveToSlide(currentIndex - 1);
 });
 
-// Indicator clicks
+// Cliques nos indicadores
 indicators.forEach((indicator, index) => {
 	indicator.addEventListener("click", () => {
 		moveToSlide(index);
 	});
 });
 
-// Swipe Functionality
+// Funcionalidade de deslizar
 let isDragging = false;
 let startPos = 0;
 let currentTranslate = 0;
@@ -151,7 +151,7 @@ function dragStart(event) {
 	isDragging = true;
 	startPos = getPositionX(event);
 
-	// Get current transform value
+	// Obter valor de transformação atual
 	const transformMatrix = window
 		.getComputedStyle(track)
 		.getPropertyValue("transform");
@@ -189,7 +189,7 @@ function dragEnd() {
 	track.style.transition = "transform 0.75s cubic-bezier(0.21, 0.61, 0.35, 1)";
 	track.style.cursor = "grab";
 
-	// Determine whether to snap to next/prev slide
+	// Determinar se deve ajustar para o próximo/anterior slide
 	const threshold = cardWidth / 3.5;
 
 	if (movedBy < -threshold) {
@@ -205,7 +205,7 @@ function getPositionX(event) {
 	return event.type.includes("mouse") ? event.pageX : event.touches[0].clientX;
 }
 
-// Keyboard navigation
+// Navegação por teclado
 document.addEventListener("keydown", (e) => {
 	if (e.key === "ArrowRight" || e.key === "ArrowDown") {
 		moveToSlide(currentIndex + 1);
@@ -214,7 +214,7 @@ document.addEventListener("keydown", (e) => {
 	}
 });
 
-// Window resize handler
+// Manipulador de redimensionamento da janela
 window.addEventListener(
 	"resize",
 	debounce(() => {
@@ -223,7 +223,7 @@ window.addEventListener(
 	}, 250)
 );
 
-// Add automatic card hover effects
+// Adicionar efeitos automáticos de hover nos cards
 cards.forEach((card) => {
 	card.addEventListener("mouseenter", function () {
 		if (!card.classList.contains("is-active")) return;
@@ -271,7 +271,7 @@ cards.forEach((card) => {
 	});
 });
 
-// Add HUD scanning animation to active card
+// Adicionar animação de scanner HUD ao card ativo
 function animateActiveCard() {
 	const activeCard = document.querySelector(".carousel-card.is-active");
 	if (!activeCard) return;
@@ -313,7 +313,7 @@ function animateActiveCard() {
 	}, 2000);
 }
 
-// Add data counter animation effect
+// Adicionar efeito de animação do contador de dados
 function animateDataCounter() {
 	const activeCard = document.querySelector(".carousel-card.is-active");
 	if (!activeCard) return;
@@ -350,7 +350,7 @@ function animateDataCounter() {
 	}
 }
 
-// Update active card when changed
+// Atualizar card ativo quando alterado
 function handleCardActivation() {
 	animateActiveCard();
 	animateDataCounter();
@@ -413,7 +413,7 @@ indicators.forEach((indicator, index) => {
 	});
 });
 
-// Initialize everything
+// Inicializar tudo
 window.onload = () => {
 	initializeCarousel();
 	moveToSlide(2);

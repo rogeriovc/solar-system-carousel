@@ -53,10 +53,10 @@ function calculateAges() {
   const msPerDay = 1000 * 60 * 60 * 24;
   const ageInDays = Math.floor((todayYMD - birthYMD) / msPerDay);
 
-  // Idade em anos terrestres (valor numérico)
+  // Idade em anos terrestres 
   const ageInYearsNum = ageInDays / 365.25;
 
-  // Atualizar informações do usuário (formatadas)
+  // Atualizar informações do usuário
   displayName.textContent = name;
   earthAge.textContent = ageInYearsNum.toFixed(2);
 
@@ -87,8 +87,7 @@ function calculateAges() {
   }, 100);
 }
 function createPlanetCard(planet, planetAgeNum, ageInDays) {
-  // planetAgeNum: número de anos no planeta (ex: 27.38)
-  // progress: quanto do ano atual do planeta já passou (0-100%)
+ 
   const progress = ((ageInDays % planet.days) / planet.days) * 100;
 
   const card = document.createElement('article');
